@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 
 ##CREATE DATABASE
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['db']
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 #Optional: But it will silence the deprecation warning in the console.
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
