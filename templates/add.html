@@ -1,0 +1,8 @@
+{% include 'base.html' %}
+{% block content %}
+<form method="post" action="{{url_for('add')}}">
+  <input name="title" placeholder="Title">
+  <input name="price" placeholder="Price">
+    <button type="submit">ADD</button>
+</form>
+{% endblock%}

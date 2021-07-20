@@ -1,0 +1,9 @@
+{% include 'base.html' %}
+{% block content %}
+<h1>HOEM PAGE</h1>
+{% for item in entries %}
+<h4>{{item.title}}</h4>
+<p>{{item.price}}</p>
+<a href="{{url_for('delete', id = item.id)}}">DELETE</a>
+{%endfor%}
+{% endblock%}
